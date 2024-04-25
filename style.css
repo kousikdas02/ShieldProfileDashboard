@@ -339,6 +339,21 @@ img {
        -webkit-transition: background-color 0.5s linear;
         transition: background-color 0.5s linear;
 }
+#dashboardMenuOverlay{
+       display: block;
+       pointer-events: none;
+       position: fixed;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       background: transparent;
+       margin: 0;
+       padding: 0 !important;
+       z-index: 14;
+       -webkit-transition: background-color 0.5s linear;
+        transition: background-color 0.5s linear;
+}
 /* for push-menu end*/
 
 
@@ -494,6 +509,19 @@ img {
     height: calc(100vh - 86.3px);
     z-index: 9;
     overflow-y: auto;
+    
+}
+
+.dashboardMneu_closeBtn{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1;
+    display: none;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
 }
 .dashboard_right{
     width: calc(100% - 270px);
@@ -618,8 +646,11 @@ img {
 .dashboardSubMenu.open{
     display: block;
 }
+.dashboard_left_inner > ul > li > .dashboardSubMenu li{
+    list-style: none;
+}
 .dashboard_left_inner > ul > li > .dashboardSubMenu{
-    padding-top: 10px 0 25px;
+    padding: 5px 0 10px;
     padding-left: 45px;
 }
 .dashboard_left_inner > ul > li > .dashboardSubMenu li:not(:last-child){
@@ -644,10 +675,12 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 -15px 48px;
+    flex-wrap: wrap;
+    margin: 0 -15px 18px;
 }
 .dasboard_head > * {
     padding: 0 15px;
+    margin-bottom: 30px;
 }
 .dasboard_breadcrumb .dasboard_breadcrumb_inner {
     background-color: rgba(255, 255, 255, 0.08);
@@ -725,6 +758,25 @@ img {
 }
 .affiliate_wrap p a:hover{
     text-decoration: underline;
+}
+.dashboardMenu_btn{
+    position: relative;
+    border: 0;
+    color: #fff;
+    background: #E36334;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.dashboardMenu_btn i {
+    margin-right: 5px;
+}
+.dashboard_cardWrapper_col{
+    margin-bottom: 30px;
+}
+.dashboard_cardWrapper_row{
+    margin-bottom: -30px;
 }
 /* dashboard right css end */
 /* dashboard css end */
@@ -817,19 +869,24 @@ img {
     .navbar-nav>li.current-menu-item>a:after,
     .navbar-nav>li>a:after,
     .navbar-nav>li.menu-item-has-children>a:after{
-        width: 100%;
+        width: 0;
         opacity: 0;
     }
 
     .navbar-nav>li.current-menu-item>a:after,
     .navbar-nav>li>a:hover:after,
     .navbar-nav>li.menu-item-has-children:hover>a:after {
-        width: 100%;
+        width: 0;
         opacity: 1;
     }
 
 /* navbar end*/
-
+.header{
+    padding: 18px 0;
+}
+.navbar-brand{
+    width: 120px;
+}
 
 }
 
@@ -851,7 +908,7 @@ img {
     .stick:before {
         width: 30px;
         height: 2px;
-        background: #000;
+        background: #fff;
         position: absolute;
         left: 0;
         top: auto;
@@ -891,6 +948,16 @@ img {
         -webkit-transform: rotate(180deg) !important;
         transform: rotate(180deg) !important;
     }
+    .sub-menu{
+        background: transparent;
+        padding-bottom: 5px;
+    }
+    .sub-menu>li{
+        border-bottom: 0;
+    }
+    .sub-menu>li>a{
+        color: #fff;
+    }
     .sub-menu,
     .navbar-nav>li>.sub-menu .sub-menu {
         position: relative;
@@ -916,7 +983,7 @@ img {
         width: 100%;
     }
     .sub-menu>li>a {
-        padding-left: 40px;
+        padding-left: 50px;
     }
     .sub-menu .sub-menu>li>a {
         padding-left: 60px;
@@ -933,11 +1000,11 @@ img {
 /* push nav */
 
 .navbar-collapse{
-    background: #fff;
+    background: #000;
     position: fixed;
     top: 0;
     height: 100% !important; 
-    width: 290px;
+    width: 270px;
     overflow-y: auto;
     transition: inherit !important;
     right: 0;
@@ -968,8 +1035,13 @@ img {
     position: absolute;
 }
 #navoverlay.open{
-
-   background-color: rgba(0,0,0,0.4);
+   background-color: rgba(0,0,0,0.6);
+   pointer-events: all;
+   -webkit-transition: background-color 0.5s linear;
+   transition: background-color 0.5s linear;
+}
+#dashboardMenuOverlay.open{
+   background-color: rgba(0,0,0,0.6);
    pointer-events: all;
    -webkit-transition: background-color 0.5s linear;
    transition: background-color 0.5s linear;
@@ -979,13 +1051,54 @@ html.open-nav{
     height: 100%;
     overflow: hidden !important;
 }
+body.open-dash-nav,
+html.open-dash-nav{
+    height: 100%;
+    overflow: hidden !important;
+}
 /* push nav end */
 
 
 
+.dashboard_left{
+    top: 0;
+    height: 100vh;
+    z-index: 15;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: transform 0.3s ease-in-out !important;
+    transition: transform 0.3s ease-in-out !important;
+   
+}
+.dashboard_left.show{
+    display: block;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: transform 0.3s ease-in-out !important;
+    transition: transform 0.3s ease-in-out !important;
+}
+.dashboard_left_inner{
+    padding-top: 50px;
+}
 
+.dashboardMneu_closeBtn{
+    display: block;
+}
+.dashboard_right{
+    margin-left: 0;
+    width: 100%;
+    flex-basis: 100%;
+    padding: 30px 15px;
+}
+.dashboard_right_inner {
+    padding: 0;
+}
+.header .container-fluid {
+    padding: 0 15px;
+}
+.dashboardMenu_btn{
 
-
+}
    
 }
 
@@ -1002,6 +1115,22 @@ html.open-nav{
         max-width: 100%;
         clear: both;
         margin-bottom: 24px;
+    }
+
+    .navbar-brand {
+        width: 100px;
+    }
+    .dashboard_wrapper{
+        padding-top: 77px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .dasboard_head > * {
+        margin-bottom: 20px;
+    }
+    .dasboard_head{
+        margin-bottom: 5px;
     }
   
 }

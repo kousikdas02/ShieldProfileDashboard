@@ -47,6 +47,25 @@ jQuery(document).ready(function ($) {
         $('body,html').toggleClass("open-nav");
     });
 
+    // for dashboard menu open
+    $(".dashboardMenu_btn").click(function () {
+         $("#dashboardMenuOverlay").toggleClass("open");
+        $('body,html').toggleClass("open-dash-nav");
+        $('.dashboard_left').addClass("show");
+
+    });
+    $("#dashboardMenuOverlay").click(function () {
+        $('body,html').removeClass("open-dash-nav");
+        $('.dashboard_left').removeClass("show");
+        $(this).removeClass("open");
+    });
+    $(".dashboardMneu_closeBtn").click(function () {
+        $('body,html').removeClass("open-dash-nav");
+        $('.dashboard_left').removeClass("show");
+        $("#dashboardMenuOverlay").removeClass("open");
+    });
+
+
     // Navbar end
 
     $(".dashboardDropdown_hasItem .openDropDownMenu").click(function (e) {
