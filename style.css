@@ -527,8 +527,9 @@ img {
     width: calc(100% - 270px);
     flex-basis: calc(100% - 270px);
     margin-left: 270px;
-    padding: 40px 30px;
+    padding: 40px 30px 30px;
     overflow-y: auto;
+    position: relative;
 }
 
 
@@ -691,6 +692,9 @@ img {
 
 .dashboard_right_inner{
     padding: 0 10px;
+    position: relative;
+    padding-bottom: 50px;
+    min-height: 100%;
 }
 .dasboard_breadcrumb .dasboard_breadcrumb_inner ul li{
     display: inline-block;
@@ -782,7 +786,44 @@ img {
 /* dashboard right css end */
 /* dashboard css end */
 
+/* footer css start */
+.footer{
+    border-top: 1px solid #fff;
+    padding-top: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.footer_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -15px -10px;
+}
+.footer_row > * {
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+.footer_col_right ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin: 0 -15px -10px;
 
+}
+.footer_col_right ul li{
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+.footer_col_right ul li a{
+    color: #E36334;
+}
+.footer_col_right ul li a:hover{
+    text-decoration: underline;
+}
+/* footer css end */
 
 
 
@@ -1089,7 +1130,7 @@ html.open-dash-nav{
     margin-left: 0;
     width: 100%;
     flex-basis: 100%;
-    padding: 30px 15px;
+    padding: 30px 15px 20px;
 }
 .dashboard_right_inner {
     padding: 0;
@@ -1100,7 +1141,19 @@ html.open-dash-nav{
 .dashboardMenu_btn{
     display: block;
 }
-   
+.footer_col{
+    width: 100%;
+}
+.footer{
+    position: static;
+}
+.footer_row{
+    justify-content: center;
+    text-align: center;
+}
+.footer_col_right ul{
+    justify-content: center;
+}
 }
 
 @media (max-width: 767px) {
