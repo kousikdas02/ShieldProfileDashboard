@@ -940,7 +940,7 @@ img {
     }
 
     .navbar-nav .clickD {
-        top: 8px;
+        top: 6px;
         right: 10px !important;
         -webkit-transform: rotate(0) !important;
         transform: rotate(0) !important;
