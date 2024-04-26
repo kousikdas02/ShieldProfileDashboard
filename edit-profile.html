@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shield Profile</title>
+
+    <!-- fabicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <!-- All CSS -->
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/brands.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/regular.min.css">
+    <link rel="stylesheet" href="css/solid.min.css">
+
+    <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/slick-theme.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+
+    <header class="header">
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-expand-lg">
+
+                <a class="navbar-brand" href="/index.html"><img src="./images/logo.png" alt=""></a>
+                <button class="navbar-toggler navbar-toggler-main" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="stick"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <button class="navbar-toggler navbar-toggler-main" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- <span class="navbar-toggler-icon"></span> -->
+                        <span class="stick"></span>
+                    </button>
+                    <ul class="navbar-nav ms-auto">
+                        <li><a href="#url">ACCUEIL</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="#url">FRANÇAIS</a>
+                            <ul class="sub-menu">
+                                <li><a href="#url">English</a></li>
+                                <li><a href="#url">Français</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#url">GARDES DU CORPS</a></li>
+                        <li><a href="#url">SOCIÉTÉS</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="header_right">
+                    <div class="dropdown">
+                        <button class="profileBtn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <!-- <i class="fas fa-user"></i> -->
+                            <i class="fas fa-user-circle"></i>
+                            <span class="profileStatus"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <div class="mess__title d-flex align-items-center">
+                                <div class="userImg ">
+                                    <a href="#">
+                                        <i class="fas fa-user"></i>
+                                        <span class="profileStatus"></span>
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h4 class="widget-title font-size-16">
+                                        <a href="#">Bruno Lhote</a>
+                                    </h4>
+                                    <span class="emailText">malalaki@proton.me</span>
+                                </div>
+                            </div>
+
+                            <div class="userDropdown_links">
+                                <ul>
+                                    <li>
+                                        <a href="#url">
+                                            <i class="fas fa-user"></i>Mon compte
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#url">
+                                            <i class="fas fa-power-off"></i>Deconnexion
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <button class="navbar-toggler" id="navoverlay" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation"></button>
+
+    </header>
+
+
+
+    <div class="dashboard_wrapper">
+        <div id="dashboardMenuOverlay"></div>
+        <div class="dashboard_left">
+            <button class="dashboardMneu_closeBtn"><i class="fas fa-times"></i></button>
+            <div class="dashboard_left_inner">
+                <ul>
+                    <li >
+                        <a href="#url"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
+                    </li>
+                    <li>
+                        <a href="#url"><i class="far fa-comment-alt"></i> Messages</a>
+                    </li>
+                    <li>
+                        <a href="#url"><i class="far fa-bookmark"></i> Favoris</a>
+                    </li>
+                    <li>
+                        <a href="#url"><i class="fas fa-briefcase"></i> Missions</a>
+                    </li>
+                    <li>
+                        <a href="#url"><i class="fas fa-key"></i> Autorisations</a>
+                    </li>
+
+                    <li class="dashboardDropdown_hasItem page_active" >
+                        <a href="#url"><i class="fas fa-cog"></i> Paramètres
+                            <span class="openDropDownMenu">
+                                <i class="fas fa-caret-down"></i>
+                            </span>
+
+                        </a>
+                        <ul class="dashboardSubMenu">
+                            <li class="submenuActive">
+                                <a href="edit-profile.html">Modifier mon profil</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dashboardDropdown_hasItem">
+                        <a href="#url"><i class="far fa-file-alt"></i>Compétences
+                            <span class="openDropDownMenu">
+                                <i class="fas fa-caret-down"></i>
+                            </span>
+
+                        </a>
+                        <ul class="dashboardSubMenu">
+                            <li><a href="#url">Tir</a></li>
+                            <li><a href="#url">Diplômes &amp; Certifications</a></li>
+                            <li><a href="#url">Militaire et Police</a></li>
+                            <li><a href="#url">Véhicules</a></li>
+                            <li><a href="#url">Autres</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#url"><i class="fas fa-user"></i> Voir mon Profil</a>
+                    </li>
+                    <li>
+                        <a href="#url"><i class="fas fa-power-off"></i> Deconnexion</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="dashboard_right">
+            <div class="dashboard_right_inner">
+                <button class="dashboardMenu_btn"> <i class="fas fa-bars"></i> Dashboard Menu</button>
+                <div class="dasboard_head">
+                    <div class="dashboard_title">
+                        <h2>Modifier mon profil</h2>
+                        <span class="verifiedStatus"><img src="./images/verified-badge.svg" alt=""></span>
+                    </div>
+                    <div class="dasboard_breadcrumb">
+                        <div class="dasboard_breadcrumb_inner">
+                            <ul class="list-items d-flex align-items-center">
+                                <li class="active__list-item"><a class="codedText" href="/">Accueil</a></li>
+                                <li class="active__list-item">APR</li>
+                                <li>Modifier mon profil</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edit_profile_form">
+                    <form>
+                        <div class="userImageUpdate">
+                            <div class="userImageUpdate_row">
+                                <div class="userImageUpdate_left">
+                                    <figure>
+                                        <img src="./images/user-placeholder.png" alt="">
+                                    </figure>
+                                    <div class="userImgUploadbtn">
+                                        <i class="fas fa-camera"></i>
+                                        <input type="file" id="userImgUpload">
+                                    </div>
+                                </div>
+                                <div class="userImageUpdate_right">
+                                    <p>
+                                        Taille Max du fichier est 5MB, Dimension minimum: 200x200 fichiers possibles:.jpg .png .pdf
+                                    </p>
+                                    <button class="cmn_btn" type="button" id="userImgDelete">
+                                        Supprimer photo
+                                    </button>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Général</h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-6 col-md-6 editProfile_eachBox_col">
+                                    <label>Genre</label>
+                                    <div class="form-group">
+                                        <select>
+                                            <option value="1">Homme</option>
+                                            <option value="1">Femme</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 editProfile_eachBox_col">
+                                    <label>Prénom</label>
+                                    <div class="inputWithIcon form-group">
+                                        <input type="text" placeholder="Prénom">
+                                        <span class="input_icon">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 editProfile_eachBox_col">
+                                    <label>Nom</label>
+                                    <div class="inputWithIcon form-group">
+                                        <input type="text" placeholder="Nom">
+                                        <span class="input_icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 editProfile_eachBox_col">
+                                    <label>Naissance (Jj/Mm/Aaaa)</label>
+                                    <div class=" form-group">
+                                        <input type="date" placeholder="Nom">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <label>A Propos De Moi 
+                                        <span class="cmn_tooltip" data-toggle="tooltip" data-placement="top" title="Sera vérifié"><i class="far fa-clock"></i></span>
+                                    </label>
+                                    <div class=" form-group">
+                                        <textarea ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Informations de contact</h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>WhatsApp</label>
+                                    <div class="inputWithIcon form-group">
+                                        <input type="text" placeholder="WhatsApp">
+                                        <span class="input_icon">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>Téléphone Mobile</label>
+                                    <div class="inputWithIcon form-group">
+                                        <input type="text" placeholder="Téléphone Mobile">
+                                        <span class="input_icon">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>Adresse Email</label>
+                                    <div class="inputWithIcon form-group">
+                                        <input type="text" placeholder="Adresse Email">
+                                        <span class="input_icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 editProfile_eachBox_col">
+                                    <label>Adresse
+                                        
+                                    </label>
+                                    <div class="inputWithIcon form-group">
+                                        <input type="text" placeholder="Adresse">
+                                        <span class="input_icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 editProfile_eachBox_col">
+                                    <label>Adresse (Complément)
+                                        
+                                    </label>
+                                    <div class="inputWithIcon form-group">
+                                        <input type="text" placeholder="Adresse (Complément)">
+                                        <span class="input_icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>Code Postal
+                                       
+                                    </label>
+                                    <div class="inputWithIcon form-group">
+                                        <input type="text" placeholder="Code Postal">
+                                        <span class="input_icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>Ville
+                                        
+                                    </label>
+                                    <div class="inputWithIcon form-group">
+                                        <input type="text" placeholder="Ville">
+                                        <span class="input_icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>Pays
+                                        
+                                    </label>
+                                    <div class="form-group">
+                                        <select class="cmn_single_select form-control">
+                                            <option></option>
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Zone Géographique</h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>Pays
+                                  
+                                    </label>
+                                    <div class="form-group">
+                                        <select class="cmn_single_select form-control">
+                                            <option></option>
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>Autres Zones
+
+                                    </label>
+                                    <div class="form-group">
+                                        <select class="cmn_multi_select form-control" multiple="multiple">
+                                            <option></option>
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Langues</h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>Expert</label>
+                                    <div class="form-group">
+                                        <select class="cmn_multi_select form-control" multiple="multiple">
+                                            <option></option>
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>Courant</label>
+                                    <div class="form-group">
+                                        <select class="cmn_multi_select form-control" multiple="multiple">
+                                            <option></option>
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 editProfile_eachBox_col">
+                                    <label>Notions</label>
+                                    <div class="form-group">
+                                        <select class="cmn_multi_select form-control" multiple="multiple">
+                                            <option></option>
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Compte bancaire pour les paiements</h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="fileUpload_box">
+                                        <div class="fileUpload_box_cntent ">
+                                            <div class="fileUpload_box_inner">
+                                                <div class="fileUpload_box_label">
+                                                    <figure><img src="./images/upload-icon.svg" alt=""></figure>
+                                                    <h5>Envoyer IBAN</h5>
+                                                    <p>Taille Max du fichier est 5MB, Dimension minimum: 200x200 fichiers possibles:.jpg .png .pdf</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <input type="file" name="iban" onchange="readURL(this);">
+                                        </div>
+
+                                        <div class="upload_preview hide">
+                                            <button type="button" class="upload_preview_close"><i class="fas fa-times"></i></button>
+                                            <figure>
+                                             <img id="iban" src="" alt="">
+                                            </figure>
+                                         </div>
+                                    </div>
+
+                                    
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Carte professionnelle</h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="fileUpload_box">
+                                        <div class="fileUpload_box_cntent">
+                                            <div class="fileUpload_box_inner">
+                                                <div class="fileUpload_box_label">
+                                                    <figure><img src="./images/upload-icon.svg" alt=""></figure>
+                                                    <h5>Envoyer Prof</h5>
+                                                    <p>Taille Max du fichier est 5MB, Dimension minimum: 200x200 fichiers possibles:.jpg .png .pdf</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <input type="file" name="business-card" onchange="readURL(this);">
+                                            
+                                        </div>
+                                        <div class="upload_preview hide">
+                                            <button type="button" class="upload_preview_close"><i class="fas fa-times"></i></button>
+                                            <figure>
+                                             <img id="business-card" src="" alt="">
+                                            </figure>
+                                         </div>
+                                        
+                                    </div>
+
+
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Vérification de l'identité (Carte d'identité, Passeport ou Titre de Séjour)</h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="fileUpload_box">
+                                        <div class="fileUpload_box_cntent">
+                                            <div class="fileUpload_box_inner">
+                                                <div class="fileUpload_box_label">
+                                                    <figure><img src="./images/upload-icon.svg" alt=""></figure>
+                                                    <h5>Envoyer recto</h5>
+                                                    <p>Taille Max du fichier est 5MB, Dimension minimum: 200x200 fichiers possibles:.jpg .png .pdf</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <input type="file" name="identity-front" onchange="readURL(this);">
+                                            
+                                        </div>
+                                        <div class="upload_preview hide">
+                                            <button type="button" class="upload_preview_close"><i class="fas fa-times"></i></button>
+                                            <figure>
+                                             <img id="identity-front" src="" alt="">
+                                            </figure>
+                                         </div>
+                                        
+                                    </div>
+
+
+                                </div>
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="fileUpload_box">
+                                        <div class="fileUpload_box_cntent">
+                                            <div class="fileUpload_box_inner">
+                                                <div class="fileUpload_box_label">
+                                                    <figure><img src="./images/upload-icon.svg" alt=""></figure>
+                                                    <h5>Envoyer verso</h5>
+                                                    <p>Taille Max du fichier est 5MB, Dimension minimum: 200x200 fichiers possibles:.jpg .png .pdf</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <input type="file" name="identity-back" onchange="readURL(this);">
+                                            
+                                        </div>
+                                        <div class="upload_preview hide">
+                                            <button type="button" class="upload_preview_close"><i class="fas fa-times"></i></button>
+                                            <figure>
+                                             <img id="identity-back" src="" alt="">
+                                            </figure>
+                                         </div>
+                                        
+                                    </div>
+
+
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Carte Vitale</h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="fileUpload_box">
+                                        <div class="fileUpload_box_cntent">
+                                            <div class="fileUpload_box_inner">
+                                                <div class="fileUpload_box_label">
+                                                    <figure><img src="./images/upload-icon.svg" alt=""></figure>
+                                                    <h5>Envoyer recto</h5>
+                                                    <p>Taille Max du fichier est 5MB, Dimension minimum: 200x200 fichiers possibles:.jpg .png .pdf</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <input type="file" name="vitale-front" onchange="readURL(this);">
+                                            
+                                        </div>
+                                        <div class="upload_preview hide">
+                                            <button type="button" class="upload_preview_close"><i class="fas fa-times"></i></button>
+                                            <figure>
+                                             <img id="vitale-front" src="" alt="">
+                                            </figure>
+                                         </div>
+                                        
+                                    </div>
+
+
+                                </div>
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="fileUpload_box">
+                                        <div class="fileUpload_box_cntent">
+                                            <div class="fileUpload_box_inner">
+                                                <div class="fileUpload_box_label">
+                                                    <figure><img src="./images/upload-icon.svg" alt=""></figure>
+                                                    <h5>Envoyer verso</h5>
+                                                    <p>Taille Max du fichier est 5MB, Dimension minimum: 200x200 fichiers possibles:.jpg .png .pdf</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <input type="file" name="vitale-back" onchange="readURL(this);">
+                                            
+                                        </div>
+                                        <div class="upload_preview hide">
+                                            <button type="button" class="upload_preview_close"><i class="fas fa-times"></i></button>
+                                            <figure>
+                                             <img id="vitale-back" src="" alt="">
+                                            </figure>
+                                         </div>
+                                        
+                                    </div>
+
+
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Mutuelle</h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="fileUpload_box">
+                                        <div class="fileUpload_box_cntent">
+                                            <div class="fileUpload_box_inner">
+                                                <div class="fileUpload_box_label">
+                                                    <figure><img src="./images/upload-icon.svg" alt=""></figure>
+                                                    <h5>Envoyer recto</h5>
+                                                    <p>Taille Max du fichier est 5MB, Dimension minimum: 200x200 fichiers possibles:.jpg .png .pdf</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <input type="file" name="mutuelle-front" onchange="readURL(this);">
+                                            
+                                        </div>
+                                        <div class="upload_preview hide">
+                                            <button type="button" class="upload_preview_close"><i class="fas fa-times"></i></button>
+                                            <figure>
+                                             <img id="mutuelle-front" src="" alt="">
+                                            </figure>
+                                         </div>
+                                        
+                                    </div>
+
+
+                                </div>
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="fileUpload_box">
+                                        <div class="fileUpload_box_cntent">
+                                            <div class="fileUpload_box_inner">
+                                                <div class="fileUpload_box_label">
+                                                    <figure><img src="./images/upload-icon.svg" alt=""></figure>
+                                                    <h5>Envoyer verso</h5>
+                                                    <p>Taille Max du fichier est 5MB, Dimension minimum: 200x200 fichiers possibles:.jpg .png .pdf</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <input type="file" name="mutuelle-back" onchange="readURL(this);">
+                                            
+                                        </div>
+                                        <div class="upload_preview hide">
+                                            <button type="button" class="upload_preview_close"><i class="fas fa-times"></i></button>
+                                            <figure>
+                                             <img id="mutuelle-back" src="" alt="">
+                                            </figure>
+                                         </div>
+                                        
+                                    </div>
+
+
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="submit_wrap">
+                            <button class="cmn_btn" type="submit">
+                                Mettre à jour
+                            </button>
+                        </div>
+
+
+                    </form>
+                </div>
+                
+                
+
+                <footer class="footer">
+                    <div class=" footer_row">
+                        <div class=" footer_col footer_col_left">
+                            <p>Copyright &copy;2024 Shield Profile SAS</p>
+                        </div>
+                        <div class=" footer_col footer_col_right">
+                            <ul>
+                                <li><a href="#url">Conditions de services</a></li>
+                                <li><a href="#url">Mentions Légales</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+  
+
+    <!-- Jquery-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>
