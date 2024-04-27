@@ -103,11 +103,11 @@ jQuery(document).ready(function ($) {
     })
 
     $(".cmn_single_select").select2({
-        placeholder: "Select an Option",
+        placeholder: "Choisir",
         allowClear: true
     });
     $(".cmn_multi_select").select2({
-        placeholder: "Select an Option",
+        placeholder: "Choisir",
 
     });
 
