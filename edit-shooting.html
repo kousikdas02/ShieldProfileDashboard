@@ -125,7 +125,7 @@
             <button class="dashboardMneu_closeBtn"><i class="fas fa-times"></i></button>
             <div class="dashboard_left_inner">
                 <ul>
-                    <li class="page_active">
+                    <li >
                         <a href="index.html"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
                     </li>
                     <li>
@@ -141,21 +141,21 @@
                         <a href="#url"><i class="fas fa-key"></i> Autorisations</a>
                     </li>
 
-                    <li class="dashboardDropdown_hasItem">
+                    <li class="dashboardDropdown_hasItem " >
                         <a href="#url"><i class="fas fa-cog"></i> Paramètres
                             <span class="openDropDownMenu">
                                 <i class="fas fa-caret-down"></i>
                             </span>
 
                         </a>
-                        <ul class="dashboardSubMenu ">
-                            <li class="page_active">
+                        <ul class="dashboardSubMenu">
+                            <li >
                                 <a href="edit-profile.html">Modifier mon profil</a>
                             </li>
 
                         </ul>
                     </li>
-                    <li class="dashboardDropdown_hasItem">
+                    <li class="dashboardDropdown_hasItem page_active">
                         <a href="#url"><i class="far fa-file-alt"></i>Compétences
                             <span class="openDropDownMenu">
                                 <i class="fas fa-caret-down"></i>
@@ -163,7 +163,7 @@
 
                         </a>
                         <ul class="dashboardSubMenu">
-                            <li><a href="edit-shooting.html">Tir</a></li>
+                            <li class="submenuActive"><a href="edit-shooting">Tir</a></li>
                             <li><a href="edit-medical.html">Diplômes &amp; Certifications</a></li>
                             <li><a href="edit-military.html">Militaire et Police</a></li>
                             <li><a href="edit-vehicles.html">Véhicules</a></li>
@@ -184,87 +184,70 @@
             <div class="dashboard_right_inner">
                 <button class="dashboardMenu_btn"> <i class="fas fa-bars"></i> Dashboard Menu</button>
                 <div class="dasboard_head">
-                    <div class="dasboard_title">
-                        <h2>Bonjour Bruno, Bienvenue !</h2>
+                    <div class="dashboard_title">
+                        <h2>Tir</h2>
                     </div>
                     <div class="dasboard_breadcrumb">
                         <div class="dasboard_breadcrumb_inner">
                             <ul class="list-items d-flex align-items-center">
                                 <li class="active__list-item"><a class="codedText" href="/">Accueil</a></li>
                                 <li class="active__list-item">APR</li>
-                                <li>Tableau de bord</li>
+                                <li>Tir</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="dashboard_cardWrapper">
-                    <div class="row dashboard_cardWrapper_row">
-                        <div class="col-lg-4 col-md-6 dashboard_cardWrapper_col">
-                            <div class="dashboard_card">
-                                <i class="fas fa-briefcase"></i>
-                                <div class="dashboard_card_content">
-                                    <h3 class="dashboard_card_title">0</h3>
-                                    <p>Mission postulées</p>
+                <div class="edit_profile_form">
+                    <form>
+
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Carte de Tir <span class="verifiedStatus green"><i class="fas fa-check-circle"></i> Validé</span></h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="fileUpload_box">
+                                        <div class="fileUpload_box_cntent ">
+                                            <div class="fileUpload_box_inner">
+                                                <div class="fileUpload_box_label">
+                                                    <figure><img src="./images/upload-icon.svg" alt=""></figure>
+                                                    <h5>Envoyer Tir</h5>
+                                                    <p>Taille Max du fichier est 5MB, Dimension minimum: 200x200 fichiers possibles:.jpg .png .pdf</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <input type="file" name="Tir" onchange="readURL(this);">
+                                        </div>
+
+                                        <div class="upload_preview hide">
+                                            <button type="button" class="upload_preview_close"><i class="fas fa-times"></i></button>
+                                            <figure>
+                                             <img id="Tir" src="" alt="">
+                                            </figure>
+                                         </div>
+                                    </div>
+
+                                    
                                 </div>
+                                
+                                
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 dashboard_cardWrapper_col">
-                            <div class="dashboard_card">
-                                <i class="fas fa-eye"></i>
-                                <div class="dashboard_card_content">
-                                    <h3 class="dashboard_card_title">2</h3>
-                                    <p>Vues du mois</p>
-                                </div>
-                            </div>
+                       
+
+
+                        <div class="submit_wrap">
+                            <button class="cmn_btn" type="submit">
+                                Mettre à jour
+                            </button>
                         </div>
-                        <div class="col-lg-4 col-md-6 dashboard_cardWrapper_col">
-                            <div class="dashboard_card">
-                                <i class="fas fa-phone-alt"></i>
-                                <div class="dashboard_card_content">
-                                    <h3 class="dashboard_card_title">0</h3>
-                                    <p>Mise en relation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
+                    </form>
                 </div>
-                <div class="affiliate_wrap">
-                    <p>
-                        Votre lien d'affiliation : <a href="#url">https://shieldprofile.com/landing-apr?ref=MALAK123</a>
-                    </p>
-                </div>
-                <div class="dashboard_cardWrapper">
-                    <div class="row dashboard_cardWrapper_row">
-                        <div class="col-lg-4 col-md-6 dashboard_cardWrapper_col">
-                            <div class="dashboard_card">
-                                <i class="fas fa-briefcase"></i>
-                                <div class="dashboard_card_content">
-                                    <h3 class="dashboard_card_title">0</h3>
-                                    <p>Mission postulées</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 dashboard_cardWrapper_col">
-                            <div class="dashboard_card">
-                                <i class="fas fa-money-bill-wave"></i>
-                                <div class="dashboard_card_content">
-                                    <h3 class="dashboard_card_title">2</h3>
-                                    <p>TOTAL GÉNÉRÉ</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 dashboard_cardWrapper_col">
-                            <div class="dashboard_card">
-                                <i class="fas fa-money-bill-alt"></i>
-                                <div class="dashboard_card_content">
-                                    <h3 class="dashboard_card_title">0</h3>
-                                    <p>RESTE À PAYER</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                
 
                 <footer class="footer">
                     <div class=" footer_row">
