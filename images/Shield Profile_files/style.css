@@ -1613,7 +1613,7 @@ select option {
 .chat_main {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 !important;
+    padding: 0;
 }
 .chat_left_col {
     width: 35%;
@@ -1744,7 +1744,7 @@ select option {
     max-height: 620px;
     position: relative;
     z-index: 1;
-    padding-bottom: 115px;
+    padding-bottom: 120px;
     overflow: hidden;
 }
 .chatBx_wrappr_outtr {
@@ -1798,7 +1798,7 @@ select option {
 .each_chatBx .chatBx_info img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: over;
 }
 .each_chatBx .chatBx_content {
     flex: 1;
@@ -1854,6 +1854,7 @@ select option {
     bottom: 0;
     left: 0;
     z-index: 2;
+    padding-top: 20px;
 }
 .typing_info {
     display: -webkit-box;
@@ -1863,7 +1864,7 @@ select option {
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 8px;
-    padding-left: 15px;
+    padding-left: 30px;
 }
 .typing_info span {
     width: 12px;
@@ -1904,12 +1905,6 @@ select option {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    transition: .5s all;
-}
-.chat_submitBtn_wrap button:hover {
-    background-color: transparent;
-    color: #E36334;
-    border-color: #E36334;
 }
 .formFileUp_wrappr {
     margin-left: 10px;
@@ -1927,10 +1922,6 @@ select option {
     color: #E36334;
     border: 1px solid #E36334;
 }
-.formFileUp_wrappr a:hover {
-    color: #fff;
-    background-color: #E36334;
-}
 .formFileUp_wrappr a:not(:last-child) {
     margin-right: 10px;
 }
@@ -1946,10 +1937,6 @@ select option {
     padding: 0 15px 10px 0;
     border-radius: 0;
     display: block;
-    font-size: 15px;
-}
-.chat_field_wrap textarea::placeholder {
-    opacity: 0.5;
 }
 
 /* SD CSS END */
@@ -1986,22 +1973,9 @@ select option {
     }
 }
 
-@media(max-width:1399px){
-    .cmn-cmpny-rght-content ul.right-side-list li a {
-        width: 35px;
-        height: 35px;
-    }    
-}
 
-@media(max-width:1199px) {
-    .cmn-cmpny-rght-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .cmn-cmpny-rght-content .cmpny-left-innr {
-        margin-bottom: 15px;
-    }
-}
+
+@media(max-width:1199px) {}
 
 @media(max-width:1024px) {
 
@@ -2388,109 +2362,8 @@ select option {
     .editProfile_eachBox{
         padding: 25px 20px;
     }
-
-
-    /* SD CSS start  */
-
-    .chat_left_col {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid rgba(227, 99, 52, 0.35);
-    }
-    .chat_right_col {
-        width: 100%;
-    }
-    .chat_leftTop_part {
-        padding: 20px 15px;
-    }
-    .chat_leftTop_part span {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-    }
-    .profile_pic {
-        width: 45px;
-        height: 45px;
-    }
-    .chat_profile_top_info_wrappr .profile_pic {
-        width: 40px;
-        height: 40px;
-    }
-    .profile_info .profile_name {
-        line-height: 1;
-        margin-bottom: 0;
-    }
-    .chat_profile_top_info_wrappr {
-        align-items: center;
-    }
-    .chatBx_wrappr_outtr {
-        max-height: 300px;
-    }
-    .cmn-cmpny-rght-content h3 {
-        font-size: 20px;
-        line-height: 1.5;
-    }
-    .cmn-cmpny-img-wrap {
-        width: 90px;
-        height: 90px;
-    }
-    .cmn-cmpny-rght-content {
-        padding-left: 15px;
-    }
-    .cmn-cmpny-rght-content ul li:not(:last-child) {
-        margin-bottom: 8px;
-    }
-
-    /* SD CSS END */
 }
 
-@media (max-width: 575px) {
-}
+@media (max-width: 575px) {}
 
-@media (max-width: 479px) {
-
-    .each_chatBx .chatBx_content {
-        padding: 10px;
-    }
-    .each_chatBx .chatBx_info {
-        width: 30px;
-        height: 30px;
-        margin-left: 10px;
-    }
-    .chatBx_wrappr_outtr {
-        padding: 12px;
-    }
-    .each_chatBx {
-        margin-bottom: 20px;
-    }
-    .each_chatBx.bot {
-        padding-left: 0;
-    }
-    .each_chatBx.bot .chatBx_info {
-        margin-right: 10px;
-    }
-    .formFileUp_wrappr a {
-        width: 25px;
-        height: 30px;
-        font-size: 12px;
-    }
-    .chat_submitBtn_wrap button {
-        width: 30px;
-        height: 30px;
-        font-size: 12px;
-    }
-    .chat_field_wrap textarea {
-        height: 50px;
-        padding: 0 10px 10px 0;
-        font-size: 13px;
-    }
-    .chatBx_wrappr {
-        padding-bottom: 105px;
-    }
-    .cmn-cmpny-rght-content {
-        flex: 0 0 auto;
-        width: 100%;
-        padding-left: 0;
-        padding-top: 15px;
-    }
-}
+@media (max-width: 479px) {}
