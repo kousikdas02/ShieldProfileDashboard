@@ -128,10 +128,10 @@
                     <li>
                         <a href="my-messages.html"><i class="far fa-comment-alt"></i> Messages</a>
                     </li>
-                    <li class="page_active">
+                    <li>
                         <a href="edit-favorites.html"><i class="far fa-bookmark"></i> Favoris</a>
                     </li>
-                    <li class="dashboardDropdown_hasItem ">
+                    <li class="dashboardDropdown_hasItem page_active">
                         <a href="edit-missions.html"><i class="fas fa-briefcase"></i> Missions
                             <span class="openDropDownMenu">
                                 <i class="fas fa-caret-down"></i>
@@ -142,7 +142,7 @@
                             <li>
                                 <a href="company-dashboard-manage-missions.html">Gérer Missions</a>
                             </li>
-                            <li>
+                            <li class="submenuActive">
                                 <a href="company-dashboard-manage-candidates.html">Gérer Candidats</a>
                             </li>
                             <li>
@@ -177,7 +177,7 @@
 
                         </a>
                         <ul class="dashboardSubMenu">
-                            <li><a href="edit-shooting.html">Tir</a></li>
+                            <li ><a href="edit-shooting.html">Tir</a></li>
                             <li><a href="edit-medical.html">Diplômes &amp; Certifications</a></li>
                             <li><a href="edit-military.html">Militaire et Police</a></li>
                             <li><a href="edit-vehicles.html">Véhicules</a></li>
@@ -199,14 +199,14 @@
                 <button class="dashboardMenu_btn"> <i class="fas fa-bars"></i> Dashboard Menu</button>
                 <div class="dasboard_head">
                     <div class="dashboard_title">
-                        <h2>Favoris</h2>
+                        <h2>Missions</h2>
                     </div>
                     <div class="dasboard_breadcrumb">
                         <div class="dasboard_breadcrumb_inner">
                             <ul class="list-items d-flex align-items-center">
                                 <li class="active__list-item"><a class="codedText" href="/">Accueil</a></li>
-                                <li class="active__list-item">APR</li>
-                                <li>Favoris</li>
+                                <li class="active__list-item">SP</li>
+                                <li>Missions</li>
                             </ul>
                         </div>
                     </div>
@@ -217,20 +217,23 @@
 
                         <div class="editProfile_eachBox">
                             <div class="editProfile_title_wrap">
-                                <h3 class="editProfile_title">Missions enregistrées en favoris 
-                                    <!-- <span class="verifiedStatus green"><i class="fas fa-check-circle"></i> Validé</span> -->
+                                <h3 class="editProfile_title">
+                                    Missions postulées
                                 </h3>
                             </div>
                             <div class="editProfile_eachBox_row row gy-4">
                                 <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
                                     <div class="cmn-cmpny-item">
                                         <div class="cmn-cmpny-img-wrap">
-                                            <img src="images/cmpn-logo.png" alt="">
+                                            <img src="images/user-placeholder.png" alt="">
                                         </div>
                                         <div class="cmn-cmpny-rght-content">
-                                            <div class="cmpny-left-innr">
-                                                <h3><a href="#">Mission Accompagnement Aeroport</a></h3>
-                                                <p>25/04/2024</p>
+                                            <div class="cmpny-left-innr chnaged">
+                                                <h3>
+                                                    <a href="#">Mission Accompagnement Aeroport - Bruno Lhote
+                                                        <span class="verifiedStatus yellow"><i class="fas fa-hourglass-half"></i></span>
+                                                    </a>
+                                                </h3>
                                                 <ul>
                                                     <li>
                                                         <i class="fas fa-building"></i>
@@ -238,21 +241,32 @@
                                                     </li>
                                                     <li>
                                                         <i class="fas fa-map-marker-alt"></i>
-                                                        <p>CANNES</p>
+                                                        Paris
                                                     </li>
                                                     <li>
                                                         <i class="fas fa-clock"></i>
-                                                        <p>05/05/2024 - 05/05/2024</p>
+                                                        <p>05/05/2024 - 05/05/2024 (300 €)</p>
                                                     </li>
                                                 </ul>
+                                                <div class="date_para_wrappr">
+                                                    <p><span class="date_para">Postulée par le candidat :</span> 25/04/2024</p>
+                                                    <p><span class="date_para">Acceptée par moi :</span> 25/04/2024</p>
+                                                </div>
                                             </div>
                                             <div class="cmpny-rght-innr">
                                                 <ul class="right-side-list">
                                                     <li>
-                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="View"><i class="fas fa-eye"></i></a>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Voir"><i class="fas fa-eye"></i></a>
                                                     </li>
                                                     <li>
                                                         <a href="#" data-toggle="tooltip" data-placement="top" title="Ecrire"><i class="fas fa-envelope"></i></a>
+                                                    </li>
+                                                  
+                                                    <li>
+                                                        <a href="#" class="red" data-toggle="tooltip" data-placement="top" title="Rejeter"><i class="fas fa-times"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Supprimer"><i class="fas fa-trash"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -260,10 +274,148 @@
                                     </div>
                                 </div>
                                 
+                            </div>
+                        </div>
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">
+                                    Missions recommandées
+                                </h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="cmn-cmpny-item">
+                                        <div class="cmn-cmpny-img-wrap">
+                                            <img src="images/user1.jpg" alt="">
+                                        </div>
+                                        <div class="cmn-cmpny-rght-content">
+                                            <div class="cmpny-left-innr chnaged">
+                                                <h3>
+                                                    <a href="#">Mission Accompagnement Aeroport - Cédric FONTAINE 
+                                                        <span class="verifiedStatus yellow"><i class="fas fa-hourglass-half"></i></span>
+                                                    </a>
+                                                </h3>
+                                                <ul>
+                                                    <li>
+                                                        <i class="fas fa-building"></i>
+                                                        <p>LIMA PROTECTION</p>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        Paris
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-clock"></i>
+                                                        <p>05/05/2024 - 05/05/2024 (300 €)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="date_para_wrappr">
+                                                    <p><span class="date_para">Proposée par moi :</span> 25/04/2024</p>
+                                                    <p><span class="date_para">Acceptée par moi :</span> 25/04/2024</p>
+                                                </div>
+                                            </div>
+                                            <div class="cmpny-rght-innr">
+                                                <ul class="right-side-list">
+                                                    <li>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Voir"><i class="fas fa-eye"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Ecrire"><i class="fas fa-envelope"></i></a>
+                                                    </li>
+                                                  
+                                                    <li>
+                                                        <a href="#" class="red" data-toggle="tooltip" data-placement="top" title="Rejeter"><i class="fas fa-times"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 
                             </div>
                         </div>
 
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Missions en attente
+                                    <!-- <span class="verifiedStatus green"><i class="fas fa-check-circle"></i> Validé</span> -->
+                                </h3>
+                            </div>
+                        </div>
+
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Missions acceptées
+                                    <!-- <span class="verifiedStatus green"><i class="fas fa-check-circle"></i> Validé</span> -->
+                                </h3>
+                            </div>
+                            <div class="editProfile_eachBox_row row gy-4">
+                                <div class="col-lg-12 col-md-12 editProfile_eachBox_col">
+                                    <div class="cmn-cmpny-item">
+                                        <div class="cmn-cmpny-img-wrap">
+                                            <img src="images/user1.jpg" alt="">
+                                        </div>
+                                        <div class="cmn-cmpny-rght-content">
+                                            <div class="cmpny-left-innr chnaged">
+                                                <h3>
+                                                    <a href="#">Mission Accompagnement Aeroport - David Budd
+                                                        <span class="verifiedStatus green"><i class="fas fa-thumbs-up"></i></span>
+                                                    </a>
+                                                </h3>
+                                                <ul>
+                                                    <li>
+                                                        <i class="fas fa-building"></i>
+                                                        <p>LIMA PROTECTION</p>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                        Paris
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-clock"></i>
+                                                        <p>05/05/2024 - 05/05/2024 (300 €)</p>
+                                                    </li>
+                                                </ul>
+                                                <div class="date_para_wrappr">
+                                                    <p><span class="date_para">Postulée par le candidat :</span> 25/04/2024</p>
+                                                    <p><span class="date_para">Acceptée par le candidat :</span> 25/04/2024</p>
+                                                    <p><span class="date_para">Acceptée par moi :</span> 25/04/2024</p>
+                                                </div>
+                                            </div>
+                                            <div class="cmpny-rght-innr">
+                                                <ul class="right-side-list">
+                                                    <li>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Voir"><i class="fas fa-eye"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Ecrire"><i class="fas fa-envelope"></i></a>
+                                                    </li>
+                                                  
+                                                    <li>
+                                                        <a href="#"  data-toggle="tooltip" data-placement="top" title="Télécharger les données"><i class="fas fa-file-alt"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="editProfile_eachBox">
+                            <div class="editProfile_title_wrap">
+                                <h3 class="editProfile_title">Missions rejetées
+                                    <!-- <span class="verifiedStatus green"><i class="fas fa-check-circle"></i> Validé</span> -->
+                                </h3>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 

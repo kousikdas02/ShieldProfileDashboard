@@ -155,6 +155,22 @@ jQuery(document).ready(function ($) {
      $('#userImgDelete').click(function() {
         $(this).parent().prev().find( "img" ).attr('src', "../images/user-placeholder.png");
      });
+     $('.favBtn').click(function() {
+        $(this).toggleClass("button-active");
+        if($(this).hasClass("button-active")){
+            $(this).find("span").text("Favoris");
+        } else{
+            $(this).find("span").text("Ajouter en Favoris");
+        }
+     });
+     $('.tickBtn').click(function() {
+        $(this).toggleClass("button-active");
+        if($(this).hasClass("button-active")){
+            $(this).find("span").text("Candidature envoyée");
+        } else{
+            $(this).find("span").text("Postuler à la mission");
+        }
+     });
     // document end
 
 })
