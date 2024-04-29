@@ -1005,6 +1005,7 @@ select option {
     padding-top: 86.3px;
     background: #171717;
     min-height: 100vh;
+    position: relative;
 }
 .dashboard_wrapper {
     display: flex;
