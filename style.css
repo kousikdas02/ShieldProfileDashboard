@@ -2259,6 +2259,7 @@ table td:last-child {
 padding: 130px 0;
 position: relative;
 z-index: 1;
+background: #000000;
 }
 .missionDetails_banner::before{
     position: absolute;
