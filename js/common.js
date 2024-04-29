@@ -1,16 +1,16 @@
-   // file upload preview
+// file upload preview
 // function readURL(input) {
 
 //     if (input.files && input.files[0]) {
 //       var reader = new FileReader();
-     
+
 //       reader.onload = function (e) {
-  
+
 //         // Use the input element's name attrbute to select and
 //         // update the image element with matching id
 //         $('#' + input.name).attr('src', e.target.result);
 
-        
+
 //       }
 //       reader.readAsDataURL(input.files[0]);
 //     }
@@ -67,7 +67,7 @@ jQuery(document).ready(function ($) {
 
     // for dashboard menu open
     $(".dashboardMenu_btn").click(function () {
-         $("#dashboardMenuOverlay").toggleClass("open");
+        $("#dashboardMenuOverlay").toggleClass("open");
         $('body,html').toggleClass("open-dash-nav");
         $('.dashboard_left').addClass("show");
 
@@ -111,66 +111,97 @@ jQuery(document).ready(function ($) {
 
     });
 
-    $('.upload_preview figure img').click(function() {
+    $('.upload_preview figure img').click(function () {
         // clicks on the respective input
         $(this).parent().parent().parent().find('input').click();
-      });
-      // creates an onchange event listener for all the inputs
-      $('.fileUpload_box_cntent input').change(function() {
+    });
+    // creates an onchange event listener for all the inputs
+    $('.fileUpload_box_cntent input').change(function () {
         // holds scope for this input
         var selector = $(this);
         // selector[0] references the direct element without jQuery since we need to access the files object inside of it
         if (selector[0].files && selector[0].files[0]) {
-          var reader = new FileReader();
-          reader.onload = function (e) {
-            selector.parent().next().find( "img" ).attr('src', e.target.result);
-            selector.parent().next().removeClass("hide");
-            selector.parent().addClass("hide");
-          }
-          reader.readAsDataURL(selector[0].files[0]);
-        }else{
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                selector.parent().next().find("img").attr('src', e.target.result);
+                selector.parent().next().removeClass("hide");
+                selector.parent().addClass("hide");
+            }
+            reader.readAsDataURL(selector[0].files[0]);
+        } else {
             selector.parent().removeClass("hide");
-        }   
-      });
-      $('.upload_preview_close').click(function() {
+        }
+    });
+    $('.upload_preview_close').click(function () {
         $(this).parent().prev().removeClass("hide");
         $(this).next().find("img").attr('src', '');
         $(this).parent().addClass("hide");
-        
-      });
-   
+
+    });
+
 
     //   use image preview
-    $('#userImgUpload').change(function() {
+    $('#userImgUpload').change(function () {
         var selector = $(this);
         if (selector[0].files && selector[0].files[0]) {
             var reader = new FileReader();
             reader.onload = function (e) {
-              selector.parent().parent().find( "img" ).attr('src', e.target.result);
+                selector.parent().parent().find("img").attr('src', e.target.result);
             }
             reader.readAsDataURL(selector[0].files[0]);
-          }
+        }
     });
 
-     $('#userImgDelete').click(function() {
-        $(this).parent().prev().find( "img" ).attr('src', "../images/user-placeholder.png");
-     });
-     $('.favBtn').click(function() {
+    $('#userImgDelete').click(function () {
+        $(this).parent().prev().find("img").attr('src', "../images/user-placeholder.png");
+    });
+    $('.favBtn').click(function () {
         $(this).toggleClass("button-active");
-        if($(this).hasClass("button-active")){
+        if ($(this).hasClass("button-active")) {
             $(this).find("span").text("Favoris");
-        } else{
+        } else {
             $(this).find("span").text("Ajouter en Favoris");
         }
-     });
-     $('.tickBtn').click(function() {
+    });
+    $('.tickBtn').click(function () {
         $(this).toggleClass("button-active");
-        if($(this).hasClass("button-active")){
+        if ($(this).hasClass("button-active")) {
             $(this).find("span").text("Candidature envoyée");
-        } else{
+        } else {
             $(this).find("span").text("Postuler à la mission");
         }
-     });
+    });
+
+
+    //  open message panel for mobile
+    if ($(this).width() < 768) {
+        $('.open_message_panel').click(function () {
+            $(this).parent().parent().parent().parent(".chat_left_col").next(".chat_right_col").addClass("show");
+            $(this).parent().parent().parent().parent(".chat_left_col").addClass("hide");
+        });
+        $('.messageBackBtn').click(function () {
+            $(this).parent().parent(".chat_right_col").prev(".chat_left_col").removeClass("hide");
+            $(this).parent().parent(".chat_right_col").removeClass("show");
+            
+        });
+    }
+
+    $(window).on('resize', function () {
+        if ($(this).width() < 768) {
+            $('.open_message_panel').click(function () {
+                $(this).parent().parent().parent().parent(".chat_left_col").next(".chat_right_col").addClass("show");
+                $(this).parent().parent().parent().parent(".chat_left_col").addClass("hide");
+            });
+            $('.messageBackBtn').click(function () {
+                $(this).parent().parent(".chat_right_col").prev(".chat_left_col").removeClass("hide");
+                $(this).parent().parent(".chat_right_col").removeClass("show");
+                
+            });
+        }
+    });
+
+    // show hide password
+  
     // document end
 
 })
